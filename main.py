@@ -51,9 +51,11 @@ def add_cafe():
         with open('cafe-data.csv', 'a') as f:
             i = 0
             for element in new_line:
-                f.write(element)
                 if i != 6:
+                    f.write(element)
                     f.write(",")
+                else:
+                    f.write(element)
                 i += 1
         return redirect(url_for("cafes"))
     # Exercise:
